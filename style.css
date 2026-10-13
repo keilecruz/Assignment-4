@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #273469;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-form label {
+    width: 100%;
+    font-weight: bold;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #273469;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4055a0;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #f4a261;
+    outline-offset: 2px;
+}
+
+#status {
+    min-height: 24px;
+    font-weight: bold;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.show-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow-wrap: anywhere;
+}
+
+.show-card img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+}
+
+.show-card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.show-card p {
+    margin: 7px 0;
+}
+
+.show-card .summary {
+    white-space: pre-line;
+}
+
+.show-card .cast {
+    margin-top: auto;
+}
+
+.show-card a {
+    color: #273469;
+    font-weight: bold;
+}
+
+.show-card a:hover {
+    color: #b23a48;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e0e4ee;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 12px;
+    }
+
+    .show-card {
+        max-width: 100%;
+    }
+
+    #search-form button {
+        width: 100%;
+    }
+}

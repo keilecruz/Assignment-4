@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVmaze Show Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>TVmaze Show Gallery</h1>
+        <p>Search for your favorite television shows!</p>
+
+    </header>
+
+    <main>
+
+        <form id="search-form">
+
+            <label for="search-input">Search for a show:</label>
+            <input type="search" id="search-input" placeholder="Try Gilmore Girls, Game of Thrones, or Abbott Elementary"
+                required>
+            <button type="submit">Search</button>
+
+        </form>
+
+        <p id="status" role="status" aria-live="polite">
+            Loading Shows...
+        </p>
+
+        <section id="gallery" class="gallery" aria-label="TV show results"></section>
+    </main>
+
+    <footer>
+        Show information provided by
+        <a href="https://www.tvmaze.com/" target="_blank" rel="noopener noreferrer">TVmaze</a>.
+        </p>
+        <p>Data used under the
+            <a href="https://www.tvmaze.com/api#licensing" target="_blank" rel="noopener noreferrer">TVmaze API license
+                (CC BY-SA)</a>.
+        </p>
+    </footer>
+
+</body>
+
+</html>

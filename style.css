@@ -79,7 +79,7 @@ input:focus-visible {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 20px;
 }
 
@@ -106,7 +106,8 @@ input:focus-visible {
 
 .show-card h2 {
     font-size: 21px;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .show-card p {
@@ -114,11 +115,22 @@ input:focus-visible {
 }
 
 .show-card .summary {
-    white-space: pre-line;
+    margin-top: 0;
+    margin-bottom: 7px;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+.show-card h3 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    padding: 0;
 }
 
 .show-card .cast {
-    margin-top: auto;
+    margin-top: 0;
+    margin-bottom: 7px;
+    padding: 0;
 }
 
 .show-card a {

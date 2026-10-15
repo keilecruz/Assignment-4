@@ -1,11 +1,15 @@
+//Name: Keile Cruz-Maldonado
+//Date: Oct. 14th, 2026
+//CSC 372-01
+// This is the script.js for assignment 4 where it handles searching for TV shows,
+// fetching show and cast information, and displaying the results
+// in a responsive gallery.
+
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const gallery = document.getElementById("gallery");
 const statusMesg = document.getElementById("status");
 
-window.addEventListener("DOMContentLoaded", function () {
-    searchShows("Gilmore Girls");
-});
 
 searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -73,17 +77,29 @@ function createShowCard(show, cast) {
     const card = document.createElement("article");
     card.className = "show-card";
 
-    // Show poster, if available.
+    // Shows poster, if available, if not then it will display "poster no available"
     if (show.image && show.image.medium) {
         const poster = document.createElement("img");
         poster.src = show.image.medium;
-        poster.alt = "Poster for " + show.name;
+        poster.alt = "Poster for " + getValue(show.name);
         poster.loading = "lazy";
 
+        // Display a message if the poster fails to load.
+        poster.addEventListener("error", function () {
+            const fallback = document.createElement("p");
+            fallback.textContent = "Poster not available";
+            poster.replaceWith(fallback);
+        });
+
         card.appendChild(poster);
+    } else {
+        const fallback = document.createElement("p");
+        fallback.textContent = "Poster not available";
+        card.appendChild(fallback);
     }
 
     //Shows all the information for the show
+    
     //showcases title
     const title = document.createElement("h2");
     title.textContent = getValue(show.name);
